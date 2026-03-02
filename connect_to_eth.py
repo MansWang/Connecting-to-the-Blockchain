@@ -34,8 +34,8 @@ def connect_with_middleware(contract_json):
 	# create a contract object. Read more on the docs pages at https://web3py.readthedocs.io/en/stable/middleware.html
 	# and https://web3py.readthedocs.io/en/stable/web3.contract.html
 	w3.middleware_onion.inject(ExtraDataToPOAMiddleware, layer=0)
-        contract = w3.eth.contract(address=address, abi=abi)
-        return w3, contract
+    contract = w3.eth.contract(address=address, abi=abi)
+    return w3, contract
 
 
 if __name__ == "__main__":
